@@ -1,0 +1,56 @@
+// Set background image to the sprite "bg_office"
+<<Scene @ bg_office>>
+
+A DAY AT THE OFFICE
+
+// Add the character "Eve" with the sprite "cool-girl", positioned on the left and center of the screen, with a green text label
+<<Act @ Eve, cool-girl, left, center, green>>
+
+Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work done.
+
+// Add the character "Adam" with the sprite "biz-guy", off-screen to the right, with a blue text label
+<<Act @ Adam, biz-guy, 1.25, center, #226677>>
+
+// Animate Adam moving to the right-half and center of the screen, taking 0.5 seconds
+<<Move @ Adam, right, center, 0.5>>
+
+// Play audio clip "music_funny" at full volume, looping indefinitely
+<<PlayAudio @ music_funny, 1.0, loop>>
+
+Adam: Hey Eve! I have a question!
+Eve: Oh no...
+
+// Flip the character "Eve" to face Adam
+<<Flip @ Eve>>
+
+// Yarn shortcut choices for branching dialogue options:
+-> Eve gets upset with Adam
+	<<Shake @ Eve, 1.0>>
+	Eve: WHAT DO YOU WANT???
+	Adam: I just wanted to see if you were enjoying your work.
+	Eve: ... It's fine. Thanks. Now leave me alone.
+-> Adam asks Eve a question
+	Adam: Do you think this project is easy to work on?
+	Eve: Not when you're bothering me.
+	Adam: Oh, I didn't realize you were busy. Sorry.
+
+// Hide Adam and remove him from the scene
+<<Hide @ Adam>>
+
+// Stop all currently playing sounds
+<<StopAudioAll @>>
+
+Eve: Finally, some peace and quiet to focus.
+<<Flip @ Eve>>
+Eve: Wait... Where's my laptop? It's not here.
+<<Shake @ Eve>>
+Eve: Adam! Have you seen my laptop???
+
+<<Flip @ Eve>>
+<<Move @ Eve, 1.25, center, 1.0>>
+Eve: AAAAAADDDDAAAMMMMMMM!!!
+
+// Fade the screen to black over 2 seconds
+<<Fade @ black, 0.0, 1.0, 2.0>>
+
+THE END.
