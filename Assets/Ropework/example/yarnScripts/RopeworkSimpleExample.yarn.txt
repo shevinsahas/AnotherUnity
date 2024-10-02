@@ -1,7 +1,7 @@
 // Set background image to the sprite "bg_office"
 <<Scene @ bg_office>>
 
-A DAY AT THE OFFICE
+Home : A DAY AT THE OFFICE
 
 // Add the character "Eve" with the sprite "cool-girl", positioned on the left and center of the screen, with a green text label
 <<Act @ Eve, cool-girl, left, center, green>>
@@ -52,5 +52,7 @@ Eve: AAAAAADDDDAAAMMMMMMM!!!
 
 // Fade the screen to black over 2 seconds
 <<Fade @ black, 0.0, 1.0, 2.0>>
+
+credits : Images From Freepic and background music and audios from Chosic
 
 THE END.
